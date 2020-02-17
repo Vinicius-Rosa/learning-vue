@@ -1,26 +1,21 @@
-const vm = new Vue({
-    el: '#app',
-    data:{
-        title: 'Instância 1',
-        text: 'Texto da Instância 1'
+const data = {
+    title: 'Data and Methods',
+    person:{
+        name: 'Vinicius Rosa',
+        age: '20'
     }
-})
-
-const helloWorldComponent = {
-    template: `
-        <div class="component">
-            Hello, World!
-        </div>
-    `
 }
 
-const vm2 = new Vue({
-    el: '#app2',
-    data:{
-        title: 'Instância 2',
-        text: 'Texto da Instância 2'
-    },
-    components: {
-        'hello-world': helloWorldComponent,
+const vm = new Vue({
+    el: '#app',
+    data, // = data: data
+    methods: {
+        alterTitle(){ //Não deve ser uma arrow function, pois é necessário o uso do this
+            this.title = `Dev by: ${this.person.name}`;
+            //Esse 'this' se refere à própria instância
+        },
+        ageSentence(age){
+            return `${age} years old`;
+        }
     }
 });

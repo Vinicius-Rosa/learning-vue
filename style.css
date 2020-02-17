@@ -10,73 +10,45 @@ body {
   font-family: 'Ubuntu Mono', monospace;
 }
 
-.vue-instance {
-  margin: 80px auto;
+#app {
   max-width: 480px;
+  margin: 40px auto;
+}
+
+main {
+  text-align: right;
+}
+
+.person {
+  background-color: darkseagreen;
   padding: 15px;
+  border: 1px solid darkolivegreen;
   border-radius: 5px;
-  border: 1px solid #eee;
-  position: relative;
-  transition: border .25s ease;
-  cursor: default;
+  text-align: left;
+  margin: 10px 0;
 }
 
-.vue-instance:hover {
-  border-color: #ccc;
-  box-shadow: 0 3px 10px rgba(0,0,0,.03);
+.person .name::before {
+  content: 'Name:'
 }
 
-.vue-instance *::before,
-.vue-instance::before {
-  display: block;
-  position: absolute;
-  top: -20px;
-  left: 0;
-  color: #ccc;
-  font-size: 13px;
-  font-weight: normal;
+.person .age::before {
+  content: 'Age:'
 }
 
-.vue-instance div,
-.vue-instance h1,
-.vue-instance p {
-  position: relative;
-  margin-top: 20px;
-  transition: padding .25s ease;
-}
 
-.vue-instance div:not(:last-child),
-.vue-instance h1:not(:last-child),
-.vue-instance p:not(:last-child) {
-  margin-bottom: 30px;
-}
-
-.vue-instance div:hover,
-.vue-instance h1:hover,
-.vue-instance p:hover {
-  padding-left: 10px;
-}
-
-.vue-instance::before {
-  content: 'Instância do vue';
-  color: green;
-}
-
-.vue-instance>h1::before {
-  content: 'Título da aplicação';
-}
-
-.vue-instance>p::before {
-  content: 'Parágrafo';
-}
-
-.vue-instance .component {
-  border-radius: 5px;
-  border: 1px solid rgb(253, 228, 146);
+button {
+  border: 1px solid darkolivegreen;
+  background: transparent;
+  color: darkolivegreen;
+  font-family: 'Ubuntu Mono';
   padding: 7.5px;
-  position: relative;
+  border-radius: 5px;
+  cursor: pointer;
+  outline: none;
 }
 
-.vue-instance .component::before {
-  content: 'Componente';
+button:focus {
+  border-color: black;
+  color: black;
 }
