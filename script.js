@@ -1,8 +1,22 @@
 const data = {
-    title: 'Condicionais',
-    p: 'Desce aí meu pasero',
-    //guest, admin, editor
-    me: 'editor',
+    title: 'Loops',
+    users: {
+        Joao: 'admin',
+        Thiago: 'editor',
+        Pafuncio: 'guest',
+    },
+    todos: [
+        {
+            id: '1',
+            title: 'Wash my possante!',
+            complete: 'false',
+        },
+        {
+            id: '2',
+            title: 'Buy some milk',
+            complete: 'true'
+        }
+    ]
 }
 
 const vm = new Vue({

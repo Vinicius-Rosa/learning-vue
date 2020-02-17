@@ -12,22 +12,18 @@
     <div id="app">
         <h1> {{ title }} </h1>
 
-        <!-- 
-            v-if cria e deleta o componente ( + PESADO )
-            ---------------------------------------------------
-            v-show apenas aplica ou não display none ( + LEVE )
-        -->
-        <p 
-        v-if="me === 'admin' "> {{ p }} </p>
-       
-        <p
-        v-else-if="me === 'editor' "> 
-            you're an editor, u can't see it too...
-        </p>
+        <ul>
+            <li v-for="todo in todos" :key="todo.id">
+                {{ todo.title }}
+            </li>
+        </ul>
 
-        <p v-else>
-            you're not a admin
-        </p>
+        <p> Users </p>
+        <ul>
+            <li v-for="(role, name) in users">
+                {{ name }}: {{ role }}
+            </li>   
+        </ul>
     </div>
 
     <!-- VUE -->
