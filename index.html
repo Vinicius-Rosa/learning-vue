@@ -10,21 +10,9 @@
 <body>
     
     <div id="app">
-        <header>
-            <h1>{{ title }}</h1>
-        </header>
-        <main>
-            <div class="person">
-                <div class="name">
-                    {{ person.name  }}
-                </div>
-                <div class="age">
-                    {{ ageSentence(person.age)  }}
-                </div>
-            </div>
-
-            <button @click = "alterTitle">Alter Title</button>
-        </main>
+        <h1>Imterpolação</h1>
+        <p v-once> {{ text }} </p>
+        <p v-html="linkTag"></p>
     </div>
 
     <!-- VUE -->
