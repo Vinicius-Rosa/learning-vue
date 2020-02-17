@@ -7,7 +7,7 @@
 }
 
 body {
-  background-color: #DCEAB2;
+  background-color: #6dbdd6;
   font-family: 'Nunito';
 }
 
@@ -16,7 +16,7 @@ body {
   margin: 40px auto;
   padding: 30px;
   background-color: #fff;
-  color: #75B9BE;
+  color: #303030;
   border-radius: 5px;
   box-shadow: 0 3px 6px rgba(0,0,0,.1);
 }
@@ -54,10 +54,10 @@ body {
 }
 
 #app button {
-  border: 1px solid #C7D66D;
+  border: 1px solid #6dbdd6;
   color: #fff;
   padding: 7.5px;
-  background-color: #C7D66D;
+  background-color: #6dbdd6;
   border-radius: 5px;
   cursor: pointer;
 }
@@ -69,3 +69,5 @@ body {
   color: rgba(198, 214, 109, 0.4);
   cursor: not-allowed;
 }
+
+.answer{ color: #d8a353 }
