@@ -10,9 +10,24 @@
 <body>
     
     <div id="app">
-        <h1>Imterpolação</h1>
-        <p v-once> {{ text }} </p>
-        <p v-html="linkTag"></p>
+        <h1> {{ title }} </h1>
+
+        <!-- 
+            v-if cria e deleta o componente ( + PESADO )
+            ---------------------------------------------------
+            v-show apenas aplica ou não display none ( + LEVE )
+        -->
+        <p 
+        v-if="me === 'admin' "> {{ p }} </p>
+       
+        <p
+        v-else-if="me === 'editor' "> 
+            you're an editor, u can't see it too...
+        </p>
+
+        <p v-else>
+            you're not a admin
+        </p>
     </div>
 
     <!-- VUE -->
