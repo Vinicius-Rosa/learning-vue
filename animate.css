@@ -1,0 +1,19 @@
+/* Squares Move Animation */
+
+.squares li{
+    animation: squares-move 2s infinite alternate;
+}
+
+@keyframes squares-move{
+    from{
+        opacity: 0;
+        transform: translateY(0);
+    }
+    50%{
+        opacity: 1;
+    }
+    to{
+        opacity: 0;
+        transform: translateY(-1100px) rotate(960deg);
+    }
+}

@@ -4,70 +4,114 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  overflow: hidden;
+  text-decoration: none;
 }
 
 body {
-  background-color: #6dbdd6;
+  background-color: #78be9f;
   font-family: 'Nunito';
 }
 
+main{ 
+  display: flex; 
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Roboto', sans-serif;
+  height: 100vh;
+  width: 100vw;
+}
+
+input{ width: 100%; }
+
+a{ color: #1d1010; }
+
 #app {
-  max-width: 480px;
-  margin: 40px auto;
+  width: 700px;
+  margin: 25vh auto;
+  height: 350px;
   padding: 30px;
-  background-color: #fff;
+  background-color: #41b883;
   color: #303030;
   border-radius: 5px;
-  box-shadow: 0 3px 6px rgba(0,0,0,.1);
+  box-shadow: 8px 10px 14px rgba(0, 0, 0, 0.5);
+  z-index: 1 !important;
 }
 
 #app h1 {
-  text-align: center;
-  font-size: 1.6em;
+  font-size: 4.5em;
   text-transform: uppercase;
-  font-weight: 900;
-  text-shadow: 0 1px 2px rgba(0,0,0,.1);
+  font-weight: 500;
+  color: #1d1010;
+  /* text-shadow: 0 1px 2px rgba(0,0,0,.1); */
 }
 
 #app div,
 #app p,
 #app a,
 #app button {
-  font-size: .9em;
-  margin: 10px 0;
-  display: block;
+  font-size: 1em;
+  margin: 15px 0;
 }
 
-#app a {
-  display: block;
-  color: #C7D66D;
-  text-decoration: none;
-  border-bottom: 1px dashed;  
-  display: inline-block;
-  margin: 5px 0;
-  transition: .25s ease;
-}
-
-#app a:hover {
-  color: #B3D6C6;
-  border-color: #B3D6C6;
-}
-
-#app button {
-  border: 1px solid #6dbdd6;
+.answer{ 
   color: #fff;
-  padding: 7.5px;
-  background-color: #6dbdd6;
-  border-radius: 5px;
-  cursor: pointer;
 }
 
-
-#app button:disabled {
-  background-color: rgba(198, 214, 109, 0.205);
-  border-color: rgba(198, 214, 109, 0.205);
-  color: rgba(198, 214, 109, 0.4);
-  cursor: not-allowed;
+.row{ 
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
 }
 
-.answer{ color: #d8a353 }
+.logo{ width: 148px; height: 66px; }
+
+.subtitle{ 
+  font-weight: bold; 
+  text-align: center; 
+  padding-top: 30px; 
+  padding-bottom: 10px; 
+  color: #303030; 
+}
+
+.input{ 
+  font-size: 1em;
+  height: 40px; 
+  border-radius: 15px;
+  border: none;
+  text-align: center;
+}
+
+.squares li{
+  height: 40px;
+  width: 40px;
+  background-color: #ffffff60;
+  display: block;
+  position: absolute;
+  float: left;
+}
+
+/* MEDIA QUERIES */
+
+@media (max-width: 1024px){
+  #app{
+      width: 90%; 
+  }
+}
+
+@media (min-width: 600px) and (max-width: 870px){
+  #app{
+      width: 90%; 
+  }
+
+  .facebook{ width: 200px; }
+  .google{  width: 200px; }
+}
+
+@media (max-width: 599px){
+  html, body{ overflow: inherit; }
+  #app{
+      width: 80%; 
+  }
+}

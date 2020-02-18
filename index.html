@@ -3,25 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>To Learn Vue.js</title>
+    <title>Yes or No</title>
 
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="animate.css">
 </head>
 <body>
-    
-    <div id="app">
-        <h1>Dados Computados e Observadores</h1>
 
-        <p>
+<main>
+    <div id="app">
+        <div class="row">
+            <img src="./logo.png" class="logo" alt="Yes or no">
+            <h1>, sir!</h1>
+        </div>
+
+        <p class="subtitle">
             Faça perguntas de "sim" ou "não" :D
         </p>
 
-        <input type="text" v-model="question">
+        <input type="text" class="input" v-model="question">
 
         <p class="answer">
             {{ answer }}
         </p>
     </div>
+    <p class="answer"> Develop by <a href="https://www.instagram.com/vrosa.jpg/?hl=pt-br">@vrosa.jpg</a></p>
+</main>
+
+    <ul class="squares">
+    </ul>
 
     <!-- VUE -->
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
@@ -31,5 +41,6 @@
 
     <!-- SCRIPTS -->
     <script src="script.js"></script>
+    <script src="animate.js"></script>
 </body>
 </html>
