@@ -29,7 +29,7 @@ a{ color: #1d1010; }
 
 #app {
   width: 700px;
-  margin: 25vh auto;
+  margin: 20vh 0;
   height: 350px;
   padding: 30px;
   background-color: #41b883;
@@ -111,7 +111,16 @@ a{ color: #1d1010; }
 
 @media (max-width: 599px){
   html, body{ overflow: inherit; }
+
+  main{ height: 680px; }
+
+  #app h1 {
+    font-size: 2.5em;
+  }
+
   #app{
+      margin: 10px;
       width: 80%; 
+      height: 450px !important;
   }
 }
